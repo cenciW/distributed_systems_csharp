@@ -11,6 +11,11 @@ public class JogoGalo
     int sum;
 
     // 1 para o jogador1 e 2 para o jogador2. 
+    /// <summary>
+    /// Cria um novo jogo do galo
+    /// </summary>
+    /// <param name="nome1">nome 1</param>
+    /// <param name="nome2">nome 2</param>
     public JogoGalo(string nome1, string nome2) 
     { 
         tabuleiro = new int[3, 3]; 
@@ -83,8 +88,6 @@ public class JogoGalo
     /// 0 se o prox for o jogador 1 | 1 se o prox for jogador 2</returns>
     public int RecebeJogada(int lin, int col)
     {
-        int ret;
-        
         //jogada invalida - se ja estiver algo la
         //ou se nao for um numero entre 0 e 2
         //-1000 invalido
@@ -92,7 +95,7 @@ public class JogoGalo
             col < 0 || col > 2 ||
             tabuleiro[lin, col] > 0)
         {
-            ret = -1000;
+            return -1000;
         }
 
         tabuleiro[lin, col] = proximoJogador + 1;
@@ -144,7 +147,7 @@ public class JogoGalo
         }
     }
 
-    public int LeInteiro(string prompt)
+    public static int LeInteiro(string prompt)
     {
         while (true)
         {
@@ -159,5 +162,59 @@ public class JogoGalo
             }
             
         }
+    }
+
+    static void Main(string[] args)
+    {
+        string jogador1, jogador2;
+
+        Console.Write("Nome do jogador 1: ");
+        jogador1 = Console.ReadLine() ?? string.Empty;
+        
+        Console.Write("Nome do jogador 2: ");
+        jogador2 = Console.ReadLine() ?? string.Empty;
+        
+        JogoGalo jogoGalo = new JogoGalo(jogador1, jogador2);
+
+        while (true)
+        {
+            jogoGalo.MostraTabuleiro();
+            Console.WriteLine("\n" + "Próximo jogador: " +
+                              jogoGalo.jogadores[jogoGalo.proximoJogador] + " (" + (jogoGalo.proximoJogador + 1) + ") a jogar...");
+            int linha = LeInteiro("Linha (1-3): ") - 1;
+            int col = LeInteiro("Coluna (1-3): ") - 1;
+            
+            int resultado = jogoGalo.RecebeJogada(linha, col);
+            
+
+            switch (resultado)
+            {
+                case 0:
+                case 1:
+                    //turno jogador 1
+                    //turno jogador 2
+                    break;
+                case -1000:
+                    Console.WriteLine("*** Jogada Inválida ***");
+                    //erro
+                    continue;
+                    // break;
+                case -3:
+                    Console.WriteLine("*** Empate ***");
+                    Console.WriteLine("Jogo finalizado, pressione qualquer tecla para continuar...");
+                    //empate
+                    return;
+                case -1:
+                case -2:
+                    Console.WriteLine("*** Vitória ***");
+                    Console.WriteLine("O jogador: " + jogoGalo.jogadores[jogoGalo.proximoJogador] + " ganhou.");
+                    //jogador 2 ganhou
+                    Console.WriteLine("Jogo finalizado, pressione qualquer tecla para continuar...");
+                    return;
+                default:
+                    break;
+            }
+        }
+        // Console.ReadLine();
     }
 }
