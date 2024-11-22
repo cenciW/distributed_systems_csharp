@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RegistroErro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DetectadoPor>Jose testes</DetectadoPor>
+  <ComponenteAfetado>Componente 1</ComponenteAfetado>
+  <Descricao>Descricao do erro.</Descricao>
+  <ListaAccaoCorrecao>
+    <AccaoCorrecao>Corrigir o erro</AccaoCorrecao>
+    <AccaoCorrecao>Corrigir o erro 2</AccaoCorrecao>
+  </ListaAccaoCorrecao>
+  <Estado>Por resolver</Estado>
+</RegistroErro>

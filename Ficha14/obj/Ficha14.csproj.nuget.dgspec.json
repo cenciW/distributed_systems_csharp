@@ -13,7 +13,6 @@
         "packagesPath": "C:\\Users\\ze\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha14\\obj\\",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\ze\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

@@ -1,0 +1,45 @@
+﻿body {
+    font-family: Arial;
+    color: blue;
+}
+
+.col1{
+    width: 100px;
+    text-align: right;
+    height: 50px;
+    
+}
+
+.col2{
+    width: 130px;
+    
+}
+
+.col3{
+    width: 100px;
+    
+}
+
+.col4{
+    width: 100px;
+    text-align: right;
+    
+}
+
+.col5{
+    width: 230px;
+    text-align: right;
+    height: 50px;
+    
+}
+
+.radioBtn{
+    text-align: right;
+}
+/*
+.label {
+    font-weight: bold;
+    font-family: Arial;
+    color: black;
+}
+*/
