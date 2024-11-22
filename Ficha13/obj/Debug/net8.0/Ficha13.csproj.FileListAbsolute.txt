@@ -12,3 +12,4 @@ C:\Users\ze\Desktop\FACULDADe\ESTGD - PORTUGAL\Sistemas Distribuidos\repos_c#\di
 C:\Users\ze\Desktop\FACULDADe\ESTGD - PORTUGAL\Sistemas Distribuidos\repos_c#\distributed_systems_csharp\Ficha13\obj\Debug\net8.0\Ficha13.pdb
 C:\Users\ze\Desktop\FACULDADe\ESTGD - PORTUGAL\Sistemas Distribuidos\repos_c#\distributed_systems_csharp\Ficha13\obj\Debug\net8.0\Ficha13.genruntimeconfig.cache
 C:\Users\ze\Desktop\FACULDADe\ESTGD - PORTUGAL\Sistemas Distribuidos\repos_c#\distributed_systems_csharp\Ficha13\obj\Debug\net8.0\ref\Ficha13.dll
+C:\Users\ze\Desktop\FACULDADe\ESTGD - PORTUGAL\Sistemas Distribuidos\repos_c#\distributed_systems_csharp\Ficha13\obj\Debug\net8.0\Ficha13.sourcelink.json
