@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{32B57ABD-89CA-4F4D-B6BB-D58D58BD0751}|C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha17|c:\\users\\ze\\desktop\\faculdade\\estgd - portugal\\sistemas distribuidos\\repos_c#\\distributed_systems_csharp\\ficha17\\productservice.asmx||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}",
-      "RelativeMoniker": "D:0:0:{32B57ABD-89CA-4F4D-B6BB-D58D58BD0751}|C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha17|solutionrelative:ficha17\\productservice.asmx||{FB9167C9-D3B8-4EDA-8083-9AF6B6F6DA62}"
+      "AbsoluteMoniker": "D:0:0:{EBC1FF91-77CB-4CA7-BBDF-38B7037CB11A}|Ficha20\\Ficha20.csproj|c:\\users\\ze\\desktop\\faculdade\\estgd - portugal\\sistemas distribuidos\\repos_c#\\distributed_systems_csharp\\ficha20\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC1FF91-77CB-4CA7-BBDF-38B7037CB11A}|Ficha20\\Ficha20.csproj|solutionrelative:ficha20\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32B57ABD-89CA-4F4D-B6BB-D58D58BD0751}|C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha17|c:\\users\\ze\\desktop\\faculdade\\estgd - portugal\\sistemas distribuidos\\repos_c#\\distributed_systems_csharp\\ficha17\\app_code\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{32B57ABD-89CA-4F4D-B6BB-D58D58BD0751}|C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha17|solutionrelative:ficha17\\app_code\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EBC1FF91-77CB-4CA7-BBDF-38B7037CB11A}|Ficha20\\Ficha20.csproj|c:\\users\\ze\\desktop\\faculdade\\estgd - portugal\\sistemas distribuidos\\repos_c#\\distributed_systems_csharp\\ficha20\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EBC1FF91-77CB-4CA7-BBDF-38B7037CB11A}|Ficha20\\Ficha20.csproj|solutionrelative:ficha20\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC1FF91-77CB-4CA7-BBDF-38B7037CB11A}|Ficha20\\Ficha20.csproj|c:\\users\\ze\\desktop\\faculdade\\estgd - portugal\\sistemas distribuidos\\repos_c#\\distributed_systems_csharp\\ficha20\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC1FF91-77CB-4CA7-BBDF-38B7037CB11A}|Ficha20\\Ficha20.csproj|solutionrelative:ficha20\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DDAB7A1-F0A8-467F-A69C-E0F48D96BEE6}|C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha19|c:\\users\\ze\\desktop\\faculdade\\estgd - portugal\\sistemas distribuidos\\repos_c#\\distributed_systems_csharp\\ficha19\\app_code\\operacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2DDAB7A1-F0A8-467F-A69C-E0F48D96BEE6}|C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha19|solutionrelative:ficha19\\app_code\\operacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductService.asmx",
-              "DocumentMoniker": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha17\\ProductService.asmx",
-              "RelativeDocumentMoniker": "Ficha17\\ProductService.asmx",
-              "ToolTip": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha17\\ProductService.asmx",
-              "RelativeToolTip": "Ficha17\\ProductService.asmx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003504|",
-              "WhenOpened": "2024-11-22T17:39:55.052Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -47,15 +42,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha17\\App_Code\\ProductService.cs",
-              "RelativeDocumentMoniker": "Ficha17\\App_Code\\ProductService.cs",
-              "ToolTip": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha17\\App_Code\\ProductService.cs",
-              "RelativeToolTip": "Ficha17\\App_Code\\ProductService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha20\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Ficha20\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha20\\Form1.Designer.cs",
+              "RelativeToolTip": "Ficha20\\Form1.Designer.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAIwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T17:36:29.871Z",
+              "WhenOpened": "2024-12-05T10:03:04.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha20\\Form1.cs",
+              "RelativeDocumentMoniker": "Ficha20\\Form1.cs",
+              "ToolTip": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha20\\Form1.cs",
+              "RelativeToolTip": "Ficha20\\Form1.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAIwEkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:45:58.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha20\\Form1.cs",
+              "RelativeDocumentMoniker": "Ficha20\\Form1.cs",
+              "ToolTip": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha20\\Form1.cs [Design]",
+              "RelativeToolTip": "Ficha20\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:40:09.198Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Operacao.cs",
+              "DocumentMoniker": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha19\\App_Code\\Operacao.cs",
+              "RelativeDocumentMoniker": "Ficha19\\App_Code\\Operacao.cs",
+              "ToolTip": "C:\\Users\\ze\\Desktop\\FACULDADe\\ESTGD - PORTUGAL\\Sistemas Distribuidos\\repos_c#\\distributed_systems_csharp\\Ficha19\\App_Code\\Operacao.cs",
+              "RelativeToolTip": "Ficha19\\App_Code\\Operacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:19:26.104Z",
               "EditorCaption": ""
             }
           ]
