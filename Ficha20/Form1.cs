@@ -1,4 +1,5 @@
 ﻿using Ficha20.ServiceReference1;
+using Ficha20.WebServiceCalculadora;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

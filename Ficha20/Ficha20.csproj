@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+    <Compile Include="Connected Services\WebServiceCalculadora\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -73,22 +73,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\ServiceReference1\Ficha20.ServiceReference1.DivisaoResponse.datasource">
+    <None Include="Connected Services\WebServiceCalculadora\Ficha20.WebServiceCalculadora.DivisaoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\Ficha20.ServiceReference1.MultiplicacaoResponse.datasource">
+    <None Include="Connected Services\WebServiceCalculadora\Ficha20.WebServiceCalculadora.MultiplicacaoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\Ficha20.ServiceReference1.Operacao.datasource">
+    <None Include="Connected Services\WebServiceCalculadora\Ficha20.WebServiceCalculadora.Operacao.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\Ficha20.ServiceReference1.SomaResponse.datasource">
+    <None Include="Connected Services\WebServiceCalculadora\Ficha20.WebServiceCalculadora.SomaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\Ficha20.ServiceReference1.SubtracaoResponse.datasource">
+    <None Include="Connected Services\WebServiceCalculadora\Ficha20.WebServiceCalculadora.SubtracaoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\WebService.wsdl" />
+    <None Include="Connected Services\WebServiceCalculadora\WebService.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,19 +106,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+    <WCFMetadataStorage Include="Connected Services\WebServiceCalculadora\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\WebService.disco" />
+    <None Include="Connected Services\WebServiceCalculadora\WebService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+    <None Include="Connected Services\WebServiceCalculadora\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <None Include="Connected Services\WebServiceCalculadora\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+    <None Include="Connected Services\WebServiceCalculadora\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

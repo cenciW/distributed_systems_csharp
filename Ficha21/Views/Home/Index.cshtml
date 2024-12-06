@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Contact Management";
+}
+
+
+<style type="text/css">
+    
+    html{
+        background-color: gray;
+    }
+
+    /* classe para as colunas*/
+    .column{
+        float: left;
+        width: 400px;
+        border: solid 1px black;
+        margin-right: 10px;
+        padding: 5px;
+        background-color: white;
+        min-height: 500px;
+    }
+
+</style>
+
+
+@* primeira coluna *@
+<div class="column align-items-center">
+    <h3>Get all Contacts</h3>
+    <input type = "button" id="getAllContacts" value="Get all Contacts" />
+
+    @* white space *@
+    <br />
+    <h3>Create new contact</h3>
+    
+    <p>
+        <label>Contact Id: </label>
+        <input type="text" id="Id" />
+    </p>
+    
+    <p>
+        <label>Contact Name: </label>
+        <input type="text" id="Name" />
+    </p>
+
+    <input type="button" id="saveContact" value="Post" onclick="createContact()">
+
+    @* white space *@
+    <br />
+    <h3>Get contact by Id</h3>
+    <p>
+        <label>Contact Id: </label>
+        <input type="text" id="IdGet" />
+    </p>
+    <input type ="button" id="getContactById" value="Get contact by Id" onclick="getContactById()"/>
+
+    @* white space *@
+    <br />
+    <h3>Update contact</h3>
+    <p>
+        <label>Contact Id: </label>
+        <input type="text" id="IdPut" />
+        <br/>
+        <label>Contact Name: </label>
+        <input type="text" id="NamePut" />
+    </p>
+    <input type="button" id="putContact" value="Put" onclick="updateContact()"/>
+
+    @* white space *@
+    <br />
+    <h3>Delete contact</h3>
+    <p>
+        <label>Contact Id: </label>
+        <input type="text" id="IdDelete" />
+    </p>
+    <input type="button" id="deleteContact" value="Delete" onclick="deleteContact()"/>
+
+    <h3>Clear Log</h3>
+    <input type="button" id="clearLog" value="Clear log"/>
+
+</div>
+
+
+@* segunda coluna *@
+<div class="column align-items-center">
+    <ul id="contacts">
+    </ul>
+</div>
+
+
+@section Scripts {
+    <script type="text/javascript">
+        $('#getAllContacts').click(async function () {
+            // Clear previous contacts
+            $('#contacts').empty();
+            $('#contacts').append('Get all contacts: ');
+
+            await $.getJSON('/api/contact', function (contactsJsonPayload) {
+                $.each(contactsJsonPayload, function (index, item) {
+                    $('#contacts').append('<li>' + item.Id + ' - ' + item.Name + '</li>');
+                });
+            });
+        });
+    </script>
+}
