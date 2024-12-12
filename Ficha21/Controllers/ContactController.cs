@@ -1,4 +1,5 @@
-﻿using Ficha21.Services;
+﻿using Ficha21.Models;
+using Ficha21.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
 
@@ -17,35 +18,65 @@ namespace Ficha21.Controllers
 
         // GET api/<ContactController>
         [HttpGet]
-        public string Get()
+
+        public IActionResult Get()
         {
-            return JsonSerializer.Serialize(_contactRepository.GetAllContacts());
+            return Ok(JsonSerializer.Serialize(_contactRepository.GetAllContacts()));
         }
 
 
         // GET api/<ContactController>/5
         [HttpGet("{id}")]
-        public string Get(string id)
+        public IActionResult Get(string id)
         {
-            return _contactRepository.GetContactById(id).ToString();
+            var contact = _contactRepository.GetContactById(id);
+            if (contact != null)
+            {
+                return Ok(JsonSerializer.Serialize(contact));
+            }
+            return NotFound(new { error = "Contato não encontrado." });
         }
+
 
         // POST api/<ContactController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post(Contact c)
         {
+            if (!string.IsNullOrWhiteSpace(c.Id) && !string.IsNullOrWhiteSpace(c.Name))
+            {
+                _contactRepository.AddContact(c);
+                // Converte o Contact para JSON e retorna com status 200
+                return Ok(JsonSerializer.Serialize(c));
+            }
+
+            // Retorna um erro 400 com uma mensagem de erro
+            return BadRequest(new { error = "Contato não adicionado." });
         }
+
 
         // PUT api/<ContactController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(Contact c)
         {
+            if (_contactRepository.UpdateContact(c))
+            {
+                return Ok(JsonSerializer.Serialize(c));
+            }
+            return BadRequest(new { error = "Contato não atualizado." });
         }
 
         // DELETE api/<ContactController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(string id)
         {
+            var contact = _contactRepository.GetContactById(id);
+            if (contact != null)
+            {
+                _contactRepository.DeleteContact(id);
+                return Ok(new { message = "Contato deletado com sucesso."});
+            }
+            return NotFound(new { error = "Contato não encontrado." });
         }
+
     }
 }

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Contact Management";
+    ViewData["Title"] = "Gestão de Contatos";
 }
 
 
@@ -20,13 +20,18 @@
         min-height: 500px;
     }
 
+    .spaced{
+        margin-bottom: 30px;
+
+    }
+
 </style>
 
 
 @* primeira coluna *@
 <div class="column align-items-center">
     <h3>Get all Contacts</h3>
-    <input type = "button" id="getAllContacts" value="Get all Contacts" />
+    <input type="button" class="spaced" id="getAllContacts" value="Get all Contacts" />
 
     @* white space *@
     <br />
@@ -42,7 +47,7 @@
         <input type="text" id="Name" />
     </p>
 
-    <input type="button" id="saveContact" value="Post" onclick="createContact()">
+    <input type="button" class="spaced" id="saveContact" value="Post" onclick="createContact()">
 
     @* white space *@
     <br />
@@ -51,7 +56,7 @@
         <label>Contact Id: </label>
         <input type="text" id="IdGet" />
     </p>
-    <input type ="button" id="getContactById" value="Get contact by Id" onclick="getContactById()"/>
+    <input type="button" class="spaced" id="getContactById" value="Get contact by Id" onclick="getContactById()" />
 
     @* white space *@
     <br />
@@ -63,7 +68,7 @@
         <label>Contact Name: </label>
         <input type="text" id="NamePut" />
     </p>
-    <input type="button" id="putContact" value="Put" onclick="updateContact()"/>
+    <input type="button" class="spaced" id="putContact" value="Put" onclick="updateContact()" />
 
     @* white space *@
     <br />
@@ -72,10 +77,10 @@
         <label>Contact Id: </label>
         <input type="text" id="IdDelete" />
     </p>
-    <input type="button" id="deleteContact" value="Delete" onclick="deleteContact()"/>
+    <input type="button" class="spaced" id="deleteContact" value="Delete" onclick="deleteContact()" />
 
     <h3>Clear Log</h3>
-    <input type="button" id="clearLog" value="Clear log"/>
+    <input type="button" id="clearLog" value="Clear log" />
 
 </div>
 
@@ -87,18 +92,179 @@
 </div>
 
 
+@* jquery  -> executado no cliente, mas faz pedidos ao servidor*@
 @section Scripts {
     <script type="text/javascript">
+        // Get all contacts
         $('#getAllContacts').click(async function () {
             // Clear previous contacts
-            $('#contacts').empty();
-            $('#contacts').append('Get all contacts: ');
+            // $('#contacts').empty();
+            $('#contacts').append('\nListando todos os contatos: ');
 
             await $.getJSON('/api/contact', function (contactsJsonPayload) {
                 $.each(contactsJsonPayload, function (index, item) {
-                    $('#contacts').append('<li>' + item.Id + ' - ' + item.Name + '</li>');
+                    $('#contacts').append('<li>' + item.Id + ' - ' + item.Name + "\n" + '</li>');
                 });
             });
         });
+
+        // Post Contact
+        $('#saveContact').click(async function () {
+            // Clear previous contacts
+            // $('#contacts').empty();
+            $('#contacts').append('\nCriando um novo contato:');
+
+            var c = {};
+            c.Id = $('#Id').val();
+            c.Name = $('#Name').val();
+            
+            //ajax
+            //ajax
+            $.ajax({
+                url: 'api/contact',
+                type: 'POST',
+                //dado que estamos enviando
+                data: JSON.stringify(c),
+                //o que estamos enviando
+                contentType: "application/json; charset=utf-8",
+                //o que estamos recebendo
+                dataType: "json",
+                //sucesso
+                success: function (response) {
+                    $('#contacts').append('<li>' + "Contato criado com sucesso: " + response.Id + ' - ' + response.Name + "\n" + '</li>');
+                },
+                //error
+                error: function (xhr, status, error) {
+                    var errorMessage;
+                    if (xhr.status === 0) {
+                        errorMessage = 'Não pode se conectar ao servidor. Por favor, verifique sua internet ou tente novamente mais tarde. \n';
+                    } else {
+                        errorMessage = xhr.status + ': ' + xhr.statusText;
+                    }
+
+                    $('#contacts').append('<li>Erro ao criar o contato: ' + errorMessage + '</li>');
+                }
+            });
+
+        });
+
+        $('#getContactById').click(async function () {
+            // Clear previous contacts
+            // $('#contacts').empty();
+            $('#contacts').append('\nListando contato por ID: ');
+            var id = $('#IdGet').val() || -1;
+
+            //ajax
+            $.ajax({
+                url: 'api/contact/' + id,
+                type: 'GET',
+                //o que estamos enviando
+                contentType: "application/json; charset=utf-8",
+                //o que estamos recebendo
+                dataType: "json",
+                //sucesso
+                success: function (response) {
+                    $('#contacts').append('<li>' + "Contato encontrado: " + response.Id + ' - ' + response.Name + "\n" + '</li>');
+                },
+                //error
+                error: function (xhr, status, error) {
+                    var errorMessage;
+                    if (xhr.status === 0) {
+                        errorMessage = 'Não pode se conectar ao servidor. Por favor, verifique sua internet ou tente novamente mais tarde.\n';
+                    } else {
+                        errorMessage = xhr.status + ': ' + xhr.statusText;
+                    }
+
+                    $('#contacts').append('<li>Erro ao encontrar o contato: ' + errorMessage + "\n" +'</li>');
+                }
+            });
+        });
+
+        //Update contact
+
+        $('#putContact').click(async function () {
+            // Clear previous contacts
+            // $('#contacts').empty();
+            $('#contacts').append('\Atualizando contato: ');
+
+            var c = {};
+            c.Id = $("#IdPut").val();
+            c.Name = $("#NamePut").val();
+
+            //ajax
+            $.ajax({
+                url: 'api/contact/' + c.Id,
+                type: 'PUT',
+                //dado que estamos enviando
+                data: JSON.stringify(c),
+                //o que estamos enviando
+                contentType: "application/json; charset=utf-8",
+                //o que estamos recebendo
+                dataType: "json",
+                //sucesso
+                success: function (response) {
+                    $('#contacts').append('<li>' + "Contato atualizado com sucesso: " + response.Id + ' - ' + response.Name + "\n" + '</li>');
+                },
+                //error
+                error: function (xhr, status, error) {
+                    var errorMessage;
+                    if (xhr.status === 0) {
+                        errorMessage = 'Não pode se conectar ao servidor. Por favor, verifique sua internet ou tente novamente mais tarde. \n';
+                    } else {
+                        errorMessage = xhr.status + ': ' + xhr.statusText;
+                    }
+
+                    $('#contacts').append('<li>Erro ao atualizar o contato: ' + errorMessage + '</li>');
+                }
+            });
+        });
+
+        //Delete contact
+        $('#deleteContact').click(function () 
+        {
+            $('#contacts').append('\Deletando contato: ');
+
+            var c = {};
+            c.Id = $("#IdDelete").val();
+
+            //ajax
+            $.ajax({
+                url: 'api/contact/' + c.Id,
+                type: 'DELETE',
+                //dado que estamos enviando
+                data: JSON.stringify(c),
+                //o que estamos enviando
+                contentType: "application/json; charset=utf-8",
+                //o que estamos recebendo
+                dataType: "json",
+                //sucesso
+                success: function (response) {
+                    $('#contacts').append('<li>' + "Contato deletado com sucesso\n" + '</li>');
+                },
+                //error
+                error: function (xhr, status, error) {
+                    var errorMessage;
+                    if (xhr.status === 0) {
+                        errorMessage = 'Não pode se conectar ao servidor. Por favor, verifique sua internet ou tente novamente mais tarde. \n';
+                    } else {
+                        errorMessage = xhr.status + ': ' + xhr.statusText;
+                    }
+
+                    $('#contacts').append('<li>Erro ao deletar o contato: ' + errorMessage + '</li>');
+                }
+            });
+        });
+
+        $('clearLog').click(function () {
+            //limpar o log
+            $('#contacts').html("");
+        });
+
+
+
+
+        
+
+
     </script>
 }
